@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formatting</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Workshop:HTML Headings</title>
+        <style>
+            body {
+                 font-family: kanit, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 0;
+                line-height: 1.8;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #c4005a;
+                margin-bottom: 10px;
+            }
+
+            .subtitle {
+                text-align: center;
+                color: #555;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                margin-top: 0;
+                color: #333;
+            }
+
+            li {
+                font-size: 17px;
+            }
+
+            ul {
+                margin-top: 8px;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 15px;
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color: #ffffff;
+            }
+
+            mark {
+                background-color: #fff59d;
+            }
+
+            code {
+                background: #ececec;
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            .note {
+                border-left: 4px solid #e0e0e0;
+                padding-left: 12px;
+                color: #666;
+                margin-top: 12px;
+            }
+
+            .note::before {
+                content: "💡 ";
+            }
+
+            .back-link {
+                display: inline-block;
+                margin-top: 10px;
+                color: #0066cc;
+                font-weight: bold;
+            }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+
+            .text-color {
+                color: #c4005a;
+            }
+
+            .box {
+                border: 2px solid #000;
+                padding: 12px 20px;
+                width: 90%;
+            }
+
+            .card {
+                background: #fff;
+                padding: 25px 30px;
+                margin-bottom: 25px;
+                border-radius: 12px;
+                border-top: 4px solid #c4005a;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+
+            .card.module-1 {
+                border-top-color: #0074c2;
+            }
+
+            .card.module-2 {
+                border-top-color: #00a884;
+            }
+            .card.module-3 {
+                border-top-color: #ff8400;
+            }
+
+               footer {
+  background-color: #1a1a1a; 
+  padding: 40px 0; 
+  margin-top: 60px;
+  text-align: center;
+  color: #999;
+}
+
+.footer-rgb-text {
+  font-weight: bold;
+  font-size: 18px; 
+  text-decoration: none;
+  display: inline-block;
+  background: linear-gradient(
+    to right, 
+    #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rgb-scroll 5s linear infinite;
+}
+@keyframes rgb-scroll {
+  0% { background-position: 0% center; }
+  100% { background-position: 400% center; }
+}
+
+            .rgb-button {
+                padding: 15px 40px;
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                outline: none;
+                position: relative;
+                z-index: 0;
+                background: #111;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            .rgb-button::before {
+                content: '';
+                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                /* ทำให้แสงดูฟุ้งๆ */
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 1;
+                border-radius: 10px;
+            }
+
+            @keyframes glowing {
+                0% {
+                    background-position: 0 0;
+                }
+
+                50% {
+                    background-position: 400% 0;
+                }
+
+                100% {
+                    background-position: 0 0;
+                }
+            }
+
+            .rgb-button:hover {
+                color: #fff;
+                text-shadow: 0 0 5px #fff;
+            }
+
+            .rgb-button:active {
+                transform: scale(0.95);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!---------------------------------card 1---------------------------------------->
+        <div class="container">
+
+            <h1>Workshop: HTML Text Formatting</h1>
+            <p class="subtitle">ฝึกใช้แท็กรูปแบบข้อความ (Formatting Tags) เพื่อสร้างเนื้อหาที่อ่านง่ายและเป็นระเบียบ</p>
+
+            <!-- Card 1: Explanation -->
+            <section class="card">
+                <h2>1. สิ่งที่ต้องรู้ก่อนเริ่มทำ Workshop</h2>
+
+                <p>HTML มีแท็กสำหรับจัดรูปแบบข้อความ ทำให้เนื้อหาดูเด่น อ่านง่าย และสื่อความหมายได้ดีขึ้น</p>
+
+                <ul>
+                    <li>&lt;b&gt; - <b class="text-color">ตัวหนา (เน้นเฉย ๆ)</b></li>
+                    <li>&lt;strong&gt; - <strong class="text-color">ตัวหนาแบบ "สำคัญ" เชิงความหมาย (semantic importance)</strong></li>
+                    <li>&lt;i&gt; - <i class="text-color">ตัวเอียง (ใช้กับศัพท์เฉพาะหรือตัวเน้น)</i></li>
+                    <li>&lt;em&gt; - <em class="text-color">ตัวเอียงแบบเน้นน้ำเสียง</em></li>
+                    <li>&lt;u&gt; - <u class="text-color">ขีดเส้นใต้</u></li>
+                    <li>&lt;ins&gt; - <ins class="text-color">ขีดเส้นใต้</ins></li>
+                    <li>&lt;mark&gt; - <mark class="text-color">ไฮไลต์ข้อความ</mark></li>
+                    <li>&lt;code&gt; - <code class="text-color">แสดงข้อความเป็นรูปแบบโค้ด</code></li>
+                    <li>&lt;small&gt; - <small class="text-color">ข้อความขนาดเล็ก</small></li>
+                    <li>&lt;del&gt; - <del class="text-color">ข้อความขีดฆ่า</del></li>
+                    <li>&lt;s&gt; - <s class="text-color">ข้อความขีดฆ่า</s></li>
+                    <li>&lt;sub&gt; - ตัวห้อย เช่น H<sub class="text-color">2</sub>O</li>
+                    <li>&lt;sup&gt; - ตัวยก เช่น x<sup class="text-color">2</sup></li>
+                </ul>
+                <div class="box">
+                    <p>แท็กที่ไม่รองรับใน HTML5</p>
+                    <ul>
+                        <li>&lt;strike&gt; – <s class="text-color">not support in HTML5</s></li>
+                        <li>&lt;big&gt; – <span class="text-color" style="font-size: 1.5em;">not support in HTML5</span>
+                        </li>
+                        <li>&lt;tt&gt; – <code class="text-color">not support in HTML5</code></li>
+                    </ul>
+                </div>
+
+                <div class="note">
+                    นักศึกษาต้องใช้แท็ก formatting อย่างน้อย 5 ชนิดในงานนี้
+                </div>
+            </section>
+
+            <!-- Card 2: Task -->
+            <section class="card module-1">
+                <h2>2. ภารกิจของสำหรับนักศึกษาต้องทำ</h2>
+                <p>ให้ค้นหาเนื้อหาเกี่ยวกับ <b>“เทคโนโลยีคอมพิวเตอร์สมัยใหม่”</b> โดยต้องมี:</p>
+
+                <ul>
+                    <li>หัวข้อ &lt;h1&gt; 1 อัน</li>
+                    <li>ย่อหน้า &lt;p&gt; อย่างน้อย 3 ย่อหน้า</li>
+                    <li>ใช้แท็ก formatting อย่างน้อย <b>5 ประเภท</b></li>
+                    <li>ข้อความไหนมีการจัด formatting ให้ <b>ใส่สีข้อความเป็นสีแดงชมพู</b></li>
+                </ul>
+            </section>
+
+            <!-- Card 3: Example from students -->
+            <section class="card module-2">
+                <div class="container">
+                    <h1 style="color: black;">เทคโนโลยีคอมพิวเตอร์สมัยใหม่</h1>
+                    <p class="subtitle">การเปลี่ยนแปลงของโลกดิจิทัลในศตวรรษที่ 21</p>
+
+                    <div class="card module-3">
+                        <p>
+                            ในปัจจุบัน <strong class="text-color">ปัญญาประดิษฐ์ (Artificial Intelligence)</strong>
+                            ได้เข้ามามีบทบาทสำคัญอย่างมาก เทคโนโลยีนี้ไม่ใช่แค่การเขียนโปรแกรมทั่วไป แต่เป็น <em
+                                class="text-color">การสร้างระบบที่สามารถเรียนรู้และตัดสินใจได้ด้วยตนเอง</em>
+                            ซึ่งช่วยเพิ่มประสิทธิภาพในการทำงานของมนุษย์ในทุกอุตสาหกรรม
+                        </p>
+
+                        <p>
+                            อีกหนึ่งเทคโนโลยีที่น่าจับตามองคือ <mark class="text-color">คอมพิวเตอร์ควอนตัม (Quantum
+                                Computing)</mark> ซึ่งใช้หลักการทางฟิสิกส์ในระดับอะตอมมาประมวลผล
+                            ข้อมูลจะถูกเก็บในรูปแบบของ <code class="text-color">Qubits</code> แทนที่จะเป็นระบบ 0 และ 1
+                            แบบเดิม ทำให้สามารถประมวลผลข้อมูลมหาศาลได้ในเวลาเพียงเสี้ยววินาที
+                        </p>
+
+                        <p>
+                            สุดท้ายคือเรื่องของ <u class="text-color">การประมวลผลแบบเอดจ์ (Edge Computing)</u>
+                            ซึ่งเป็นการนำหน่วยประมวลผลไปไว้ใกล้กับแหล่งกำเนิดข้อมูลให้มากที่สุด
+                            เพื่อลดความล่าช้าในการส่งข้อมูลผ่านอินเทอร์เน็ต เทคโนโลยีนี้มีความจำเป็นอย่างยิ่งสำหรับ
+                            <span class="text-color"><s>ระบบคลาวด์แบบเก่า</s></span>
+                            ที่อาจไม่ตอบโจทย์ความเร็วในระดับมิลลิวินาที เช่น ในรถยนต์ไร้คนขับ
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <button class="rgb-button"><a href="index.html">Back to HTML Tutorial</a></button>
+
+        </div>
+        <footer>
+            <p class="footer-rgb-text">&copy;2025 html dek anuban Sommai</p>
+        </footer>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -7,31 +7,105 @@
   <title>html dek anuban</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: kanit, sans-serif;
       margin: 20px 40px;
     }
-
+    li{
+      color: #333;
+    }
     a {
-      color: #0066cc;
-      text-decoration: none;
+      font-size: 16px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #333; 
+  transition: 0.3s;
+  display: inline-block; 
     }
-
     a:hover {
-      text-decoration: underline;
-    }
-    footer{
-      background-color: black;
-      text-align: center; 
-      color: #ffffff;
-      padding: 10px;
-      Margin-top: 50px; 
-    }
+  color: transparent;
+  background: linear-gradient(
+    to right, 
+    #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rgb-scroll 1.5s linear infinite;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+}
+
+@keyframes rgb-scroll {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+   footer {
+  background-color: #1a1a1a; 
+  padding: 40px 0; 
+  margin-top: 60px;
+  text-align: center;
+  color: #999;
+}
+
+.footer-rgb-text {
+  font-weight: bold;
+  font-size: 18px; 
+  text-decoration: none;
+  display: inline-block;
+  background: linear-gradient(
+    to right, 
+    #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rgb-scroll 5s linear infinite;
+}
+@keyframes rgb-scroll {
+  0% { background-position: 0% center; }
+  100% { background-position: 400% center; }
+}
     pre{
       background-color: rgb(241, 241, 241);
       border-left: #0b85fe 5px solid;
       font-size: 16px;
       padding: 10px;
     }
+
+.rgb-text-link {
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #333; /* สีปกติก่อนเอาเมาส์วาง */
+  transition: 0.3s;
+  display: inline-block;
+  
+
+  background: linear-gradient(
+    to right, 
+    #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text; 
+  background-clip: text;
+}
+
+
+.rgb-text-link:hover {
+  color: transparent; 
+  animation: rgb-text-move 3s linear infinite;
+  transform: scale(1.05); 
+}
+
+@keyframes rgb-text-move {
+  0% { background-position: 0% center; }
+  100% { background-position: 400% center; }
+}
+
   </style>
 </head>
 
@@ -42,18 +116,18 @@
   </p>
   <h2 style="color: rgb(218 5 94)">Topics</h2>
   <ul style="color: #0066cc; line-height: 1.6; list-style-type: square">
-    <li><a href="#s1">Introduction to HTML</a></li>
-    <li><a href="#s2">HTML Document Structure</a></li>
-    <li><a href="#s3">Heading</a></li>
-    <li><a href="#s4">Paragraph</a></li>
-    <li><a href="#s5">Text Formatting</a></li>
-    <li><a href="#s6">Creating Links</a></li>
-    <li><a href="#s7">Lists (Ordered and Unordered)</a></li>
-    <li> <a href="#s8">Adding Images</a> </li>
-    <li> <a href="#s9">Creating Tables</a> </li>
-    <li> <a href="#s10">HTML Forms</a> </li>
-    <li> <a href="#s11">Semantic HTML</a> </li>
-    <li><a href="#s12">Workshop</a></li>
+    <li><a href="#s1" class="rgb-text-link">Introduction to HTML</a></li>
+    <li><a href="#s2" class="rgb-text-link">HTML Document Structure</a></li>
+    <li><a href="#s3" class="rgb-text-link">Heading</a></li>
+    <li><a href="#s4" class="rgb-text-link">Paragraph</a></li>
+    <li><a href="#s5" class="rgb-text-link">Text Formatting</a></li>
+    <li><a href="#s6" class="rgb-text-link">Creating Links</a></li>
+    <li><a href="#s7" class="rgb-text-link">Lists (Ordered and Unordered)</a></li>
+    <li> <a href="#s8" class="rgb-text-link">Adding Images</a> </li>
+    <li> <a href="#s9" class="rgb-text-link">Creating Tables</a> </li>
+    <li> <a href="#s10" class="rgb-text-link">HTML Forms</a> </li>
+    <li> <a href="#s11" class="rgb-text-link">Semantic HTML</a> </li>
+    <li><a href="#s12" class="rgb-text-link">Workshop</a></li>
   </ul>
   <hr />
   <!-------------------------------section 1----------------------------------------->
@@ -92,7 +166,7 @@
   <hr />
   <!-------------------------------section 3----------------------------------------->
   <h1 id="s3" style="color:rgb(218 5 94)">Heading</h1>
-  <p>workshop</p>
+  <a href="W04_1_Headings.html">workshop</a>
   <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
   <pre>
         - &lt;h1&gt;: Heading 1
@@ -115,7 +189,7 @@
   <hr>
   <!-------------------------------section 5----------------------------------------->
   <h1 id="s5" style="color:rgb(218 5 94)">Text Formatting</h1>
-  <p style="color: #0066cc;">workshop</p>
+  <a href="W04_02_formatting.html">workshop</a>
   <p>HTML provides various elements to format text...</p>
   <pre>
         - &lt;h1&gt; to &lt;h6&gt;: Headings
@@ -337,8 +411,6 @@
   <a href="index.html">TOP</a>
   <hr>
   <a href="">Learn more about HTML</a>
-  <footer>
-    &copy;2025 html dek anuban Sommai
-  </footer>
+  <footer><p class="footer-rgb-text">&copy;2025 html dek anuban Sommai</p></footer>
 </body>
 </html>
