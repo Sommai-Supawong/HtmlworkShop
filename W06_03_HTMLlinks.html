@@ -283,6 +283,97 @@
         transform: scale(0.95);
         /* กดแล้วปุ่มยุบลงเล็กน้อย */
     }
+.button5 {
+    width: 160px;
+    height: 60px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #0c0c0c;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;}
+.button6 {
+    width: 160px;
+    height: 60px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #0c0c0c;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.button6:hover {
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.562);
+    transform: scale(1.01);
+    box-shadow: inset 0px 0px 10px rgb(59, 59, 59);
+}
+.button6::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 50%;
+    height: 100%;
+    transform: rotate(80deg);
+    background-color: #ffffff77;
+    filter: blur(10px);
+    transition: 0.6s ease-in-out;
+} 
+.button6:hover::after {
+    left: 100%;
+}
+.button5.gold-border {
+    border: 5px solid #FFD700;
+    box-sizing: border-box; 
+}
+.button6.gold-border {
+    border: 5px solid #FFD700;
+    box-sizing: border-box; 
+}
+.button6.gold-border.effect:hover {
+    border-color: #fff1a0;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.4), inset 0px 0px 10px rgb(59, 59, 59);
+}   
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .button-grid > div {
+       
+        padding: 20px;
+        text-align: center;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-grid p {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .button-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 </head>
 
@@ -336,18 +427,18 @@
                 <a class="download-btn" href="/joke.jpg" download>Download File</a>
                 <p class="small-note">ต้องมีไฟล์ในโฟลเดอร์จึงจะดาวน์โหลดได้จริง</p>
             </div>
-            </div>
-            <!---------------------------------card 5---------------------------------------->
-            <div class="card module-4">
-                <h2>5. Button Link</h2>
-                <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มน่าทาง</p>
-                <pre>       &lt;a href="https://www.example.com" class="btn-link"&gt;
+        </div>
+        <!---------------------------------card 5---------------------------------------->
+        <div class="card module-4">
+            <h2>5. Button Link</h2>
+            <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มน่าทาง</p>
+            <pre>       &lt;a href="https://www.example.com" class="btn-link"&gt;
         Visit Website
         &lt;/a&gt;
             </pre>
-                <a href="https://www.example.com" class="btn-link"> Visit Websie </a>
-                <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
-                <pre>
+            <a href="https://www.example.com" class="btn-link"> Visit Websie </a>
+            <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
+            <pre>
         &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
         - มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
         - ผูกกับ DOM (document) โดยตรง
@@ -357,28 +448,59 @@
         - เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
         - ผูกกับ window โดยตรง
             </pre>
-                <button class="btn-link" onclick="document.location='index.html'">
-                    HTML Tutorial
-                </button>
-
-                <button class="btn-link" onclick="location.href='https://youtu.be/fLexgOxsZu0?si=fhlaTGpf1g3_wF5B'">
-                    Visit Website
-                </button>
+            <div class="button-grid">
+                <div>
+                    <p>ปุ่ม<code>HTML Tutorial</code></p>
+                    <button  onclick="document.location='index.html'">
+                        HTML Tutorial
+                    </button>
+                </div>
+                <div>
+                    <p>ปุ่ม<code>Location.href</code></p>
+                    <button   onclick="location.href='https://youtu.be/fLexgOxsZu0?si=fhlaTGpf1g3_wF5B'">
+                        Visit Website
+                    </button>
+                </div>
+                <div>
+                    <p>ตัวอย่างปุ่มจาก https://cssnippets.shefali.dev</p>
+                    <button class="button5" onclick="location.href='https://cssnippets.shefali.dev'">
+                       SUBSCRIBE
+                    </button>
+                </div>
+                <div>
+                    <p>เพิ่มขอบทอง</p>
+                    <button class="button5 gold-border" onclick="location.href='https://cssnippets.shefali.dev'">
+                       SUBSCRIBE
+                    </button>
+                </div>
+                <div>
+                    <p>เพิ่นแอนิเมชันเบื่อขี้ปุ่ม</p>
+                    <button class="button6" onclick="location.href='https://cssnippets.shefali.dev'">
+                       SUBSCRIBE
+                    </button>
+                </div>
+                 <div>
+                    <p>ปุ่นสีด่า ขอบทอง แสงวิ่ง</p>
+                    <button class="button6 gold-border effect" onclick="location.href='https://cssnippets.shefali.dev'">
+                       SUBSCRIBE
+                    </button>
+                </div>
             </div>
-            <!---------------------------------card 6---------------------------------------->
-            <div class="card module-5">
-                <h2>6. Image Link</h2>
-                <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
-                <pre>
+        </div>
+        <!---------------------------------card 6---------------------------------------->
+        <div class="card module-5">
+            <h2>6. Image Link</h2>
+            <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
+            <pre>
         &lt;a href="https://youtube.com"&gt;
         &lt;img src="images/sample.jpg" width="250"&gt;
         &lt;/a&gt;
             </pre>
-                <a class="image-link" href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank"><img
-                        src="https://i.redd.it/michael-jackson-creates-the-hee-hee-v0-kphyondbpgzc1.jpg?width=1536&format=pjpg&auto=webp&s=208dc67e63ad1f5243895dfd14e94580a32e64f8"
-                        alt="รูปภาพ" width="250"></a>
-                <p class="note">หากต้องการไปรูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
-            </div>
+            <a class="image-link" href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank"><img
+                    src="https://i.redd.it/michael-jackson-creates-the-hee-hee-v0-kphyondbpgzc1.jpg?width=1536&format=pjpg&auto=webp&s=208dc67e63ad1f5243895dfd14e94580a32e64f8"
+                    alt="รูปภาพ" width="250"></a>
+            <p class="note">หากต้องการไปรูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
+        </div>
         <button class="rgb-button"><a style="color:#f0f0f0;" href="index.html">Back to HTML Tutorial</a></button>
     </div>
 
