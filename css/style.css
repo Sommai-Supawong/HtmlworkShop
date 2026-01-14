@@ -1,0 +1,212 @@
+html {
+    scroll-padding-top: 250px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: kanit, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background-image: url('https://media.timeout.com/images/103166739/750/562/image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    background-color: #fffcfd;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 250px auto 0 auto;
+
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff0066;
+    margin-bottom: 10px;
+}
+
+.sub-header {
+    text-align: center;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+
+code {
+    background: #e8e8e8;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.btn-text-link {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.btn-text-link li {
+    background-color: #ff0066;
+    padding: 8px 15px;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.btn-text-link li:hover {
+    background-color: #34041a;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100;
+    height: auto;
+}
+
+
+
+.card {
+    background: #fff;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-top: 4px solid #c4005a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card.module-1 {
+    border-top-color: #0074c2;
+}
+
+.card.module-2 {
+    border-top-color: #00a884;
+}
+
+.card.module-3 {
+    border-top-color: #ff9800;
+}
+
+.card.module-4 {
+    border-top-color: #8e24aa;
+}
+
+.card.module-5 {
+    border-top-color: #ff7043;
+
+}
+
+.card.module-6 {
+    border-top-color: #00f89d;
+
+}
+
+.card.module-7 {
+    border-top-color: #01a2f2;
+
+}
+
+pre {
+    background: #f0f0f0;
+    padding: 12px;
+    border-left: 4px solid #c4005a;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.note {
+    border-left: 4px solid #e0e0e0;
+    padding-left: 12px;
+    margin-top: 12px;
+    color: #666;
+    font-size: 13px;
+}
+
+.note::before {
+    content: "💡 ";
+}
+
+.img-fixed {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+    background-color: #aac8f0;
+    color: rgb(4, 32, 158);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.obj-fit-image {
+    width: 800px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.obj-fit-image.contain {
+    object-fit: contain;
+}
+
+.obj-fit-image.fill {
+    object-fit: fill;
+}
+
+.obj-fit-image.cover {
+    object-fit: cover;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.position{
+    display : flex;
+
+}
+.position.left {
+    justify-content: flex-start;
+}
+.position.center {
+    justify-content: center;
+}
+.position.right {
+    justify-content: flex-end;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 10px 10px auto auto;
+}
+
+.gallery img {
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
