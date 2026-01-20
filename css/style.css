@@ -55,31 +55,42 @@ code {
 }
 
 .btn-text-link {
-    color: white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    transition: background-color 0.3s;
     margin-top: 20px;
     gap: 10px;
 }
 
-.btn-text-link li {
-    background-color: #ff0066;
+.btn-text-link a {
+    background: linear-gradient(90deg, #ff0066, #ff66cc);
+    box-shadow: 0 4px 6px rgba(82, 82, 82, 0.3);
+   
+    transition: transform 0.9s;
+
     padding: 8px 15px;
     border-radius: 100px;
     font-size: 16px;
+    font-size: 1.25rem;
+    text-decoration: none;
 }
 
+.btn-text-link a:hover {
+    background: linear-gradient(90deg, #04993a, #00ff11);
+}
+.btn-text-link li{
+margin: 15px 0px;
+transition: transform 0.3s;
+}
 .btn-text-link li:hover {
-    background-color: #34041a;
-    cursor: pointer;
+    transform: translateY(-10px) 
 }
-
 img {
     max-width: 100;
     height: auto;
+    margin-top: 15px;
 }
 
 
@@ -149,6 +160,9 @@ pre {
     height: 160px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin: 15px 0;
+    border: 2px solid #000000;
 }
 
 .badge {
@@ -186,6 +200,9 @@ pre {
 }
 .position{
     display : flex;
+    border:2px dashed gray;
+    margin:20px 0px;
+    align-items: center;
 
 }
 .position.left {
@@ -200,7 +217,7 @@ pre {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 10px 10px auto auto;
 }
@@ -209,4 +226,23 @@ pre {
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.YT-image {
+    transition: 0.3s ease;
+    width: 100px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 20px;
+}
+.YT-image:hover {
+    transform: scale(1.05);
+}
+figure{     
+    margin-top: 20px; 
+    text-align: center;
+}
+.local-image{
+    background-image: url('../image/nature.jpg');
+    background-size: cover;
 }
