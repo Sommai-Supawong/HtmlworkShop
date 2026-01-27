@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+html{
+    scroll-behavior: smooth;
+
+}
+    body {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url('https://img.freepik.com/free-vector/modern-abstract-white-minimal-background_84443-8318.jpg?semt=ais_hybrid&w=740&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+    .header {
+        background-color: #ffffff;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    box-shadow: 0 4px 40px 0 rgba(66, 182, 255, 0.2);
+    }
+    
+    li {
+        display: inline;
+        margin-right: 30px;
+        
+    }
+    .btn-text-link {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        transition: all 0.5s ease;
+    }
+    .btn-text-link:hover {
+        color: gray;
+    }
+    .container {
+        padding: 24px 30px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        width: 500px;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px 0 rgba(200, 0, 255, 0.464);
+
+    }
+    .card2{
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        width:auto;
+        padding: 20px 50px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px 0 rgba(190, 189, 189, 0.2);
+    }
+
+    .card.module-1 {
+        background: linear-gradient(135deg, #e0e3f1 0%, #c6b3dc 100%);
+    }
+
+    .card.module-2 {
+        background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    }
+    .card.module-3 {
+        background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    }
+
+    .custom-font {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .box-item {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        padding: 10px 15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+    }
+
+    .box-item:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+    }
+
+    .box-address {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 10px 15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        margin-bottom: 10px;
+    }
+
+    .box-address:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+    }
+
+    .badge {
+        background-color: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .btn-link {
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 42px;
+        transition: all 0.5s ease;
+    }
+
+    .btn-link.social {
+        color: #000000;
+    }
+
+    .btn-link.btn-link.social:hover {
+        color: #b9b9b9;
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+    }
+    .btn-back{
+        color: rgb(0, 0, 0);
+        background: linear-gradient(135deg, #f1e0e0 0%, #e22486 100%);
+        font-size: 20px;
+        border-radius: 30px;
+        padding: 15px 25px;
+        margin: 20px auto;
+        width: fit-content;  
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+    }
+    .btn-back a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);}
+
+    footer {
+        text-align: center;
+        color: rgb(71, 71, 71);
+        padding: 50px;
+        background-color: #ffffff;
+        margin-top: auto;
+        box-shadow: 0 -4px 20px 0 rgba(24, 191, 247, 0.2);
+    }
+</style>
+<body>
+    <div class="header">
+        <h1 >My Grade</h1>
+        <ul>
+            <li><a href="#c1" class="btn-text-link">ข้อมูลนักศึกษา</a></li>
+            <li><a href="#c2" class="btn-text-link">ผลการเรียน</a></li>
+            <li><a href="#c3" class="btn-text-link">สถานที่ติดต่อ</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="card module-3">
+            <h1 id="c1">ข้อมูลนักศึกษา</h1>
+            <div class="card2">
+                <img src="image/myImage.jpeg" alt="Profile Picture" width="auto" height="150">
+                <p><span class="custom-font">รหัสนักศึกษา:</span> 674259024</p>
+                <p><span class="custom-font">ชื่อ:</span> นายสมหมาย สุภาวงค์</p>
+                <p><span class="custom-font">หมู่เรียน:</span> 67/50</p>
+                <p><span class="custom-font">สาขา:</span> วิทยาการคอมพิวเตอร์</p>
+            </div>
+        </div>
+        <div class="card module-1">
+            <h1 id="c2">ผลการเรียน</h1>
+            <div class="box-item">
+                <h2>ปี 1 เทอม 1/2567</h2>
+                <p>เกรดเฉลี่ย: 4.00</p>
+            </div>
+            <div class="box-item">
+                <h2>ปี 1 เทอม 2/2567</h2>
+                <p>เกรดเฉลี่ย: 3.92</p>
+            </div>
+            <div class="box-item">
+                <h2>ปี 2 เทอม 1/2568</h2>
+                <p>เกรดเฉลี่ย: 3.94</p>
+            </div>
+            <h2>เกรดเฉลี่ยสะสม GPA : <span class="badge">4.00</span></h2>
+        </div>
+        <div class="card module-1">
+            <h1 id="c3">สถานที่ติดต่อ</h1>
+            <div class="box-address">
+                <p>
+                <h3>สถานศึกษา:</h3>85 Malaiman Road, Muang, Nakhon Pathom 73000 Thailand</p>
+            </div>
+            <div class="box-address">
+                <p>
+                <h3>บ้าน:</h3>123/45 Sukhumvit Road, Bangna, Bangkok 10260 Thailand</p>
+            </div>
+            <h1>ติดต่อ</h1>
+            <div>
+                <a href="https://web.facebook.com/sommai.supawong" class="btn-link social"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://Sommai.050449@gmail.com" class="btn-link social"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        กลับไปด้านบน <a href="#top" class="btn-text-link"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+<div class="btn-back">
+        <a href="index.html">กลับไปหน้าหลัก</a>
+    </div>
+    <footer>
+        <h2>2026 My Grade by Sommai</h2>
+    </footer>
+</body>
+
+</html>
