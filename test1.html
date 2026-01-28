@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #73584F;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #2a2a2a;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #ffffff;
+            text-shadow: #2a2a2a 2px 2px 4px;
+        }
+
+        nav {
+            background-color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 30px 0 #434343;
+        }
+
+        .container {
+            padding: 24px 30px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            width: 900px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .card.header {
+            justify-content: center;
+            transition: all 0.5s ease;
+        }
+
+        .card.detail {
+            background-color: #3E2522;
+            color: white;
+            margin-left: 20px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease;
+        }
+
+        .card.detail:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
+        }
+
+        .btn-text-link {
+            text-decoration: none;
+            background-color: #3E2522;
+            color: white;
+            font-size: 16px;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            width: fit-content;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .btn-text-link:hover {
+            background-color: #73584F;
+            transform: translateY(-10px);
+        }
+
+        .btn-link-external {
+            text-decoration: none;
+            color: white;
+            background-color: #73584F;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .image-me {
+            height: 220px;
+            width: 220px;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-left: 90px;
+            transition: all 0.5s ease;
+        }
+
+        .image-me:hover {
+            transform: scale(1.05);
+        }
+
+        .container-grades {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 900px;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-grade{
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 25px 30px;
+            
+            transition: all 0.5s ease;
+            font-weight: bold;
+            width: auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .box-grade.module-1{
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 15px 40px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            font-weight: bold;
+            width: auto;
+            text-align: center;
+            font-size: 24px;
+        }
+        .box-grade.module-1:hover {
+            box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.3);
+        }
+        .box-grade.module-2{
+            margin:40px 0 40px 0;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px 40px;
+            box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.5s ease;
+            font-weight: bold;
+            width: 900px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .grade {
+            color: #4CAF50;;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        footer{
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1><span><i class="fa-solid fa-chart-area"></i> </span>รายงานผลเกรด</h1>
+    </nav>
+    <div class="container">
+        <div class="card header">
+            <a href="#1" class="btn-text-link"><span><i class="fa-solid fa-user-graduate"></i> </span>ข้อมูลนักศึกษา</a>
+            <a href="#2" class="btn-text-link"><span><i class="fa-solid fa-trophy"></i> </span>ผลการเรียน</a>
+            <a href="#3" class="btn-text-link"><i class="fa-solid fa-phone"></i> </span>ติดต่อ</a>
+        </div>
+        <div class="card">
+            <div class="card detail" id="1">
+                <h2><span><i class="fa-solid fa-user-graduate"></i> </span>Mr.Sommai Supawong</h2>
+                <div style="display: flex; justify-content: space-between; width:400px; margin-top: 20px;">
+                    <div>
+                        <p><span><i class="fa-solid fa-id-badge"></i> </span>รหัสนักศึกษา:</p>
+                        <p><span><i class="fa-solid fa-file-signature"></i> </span>ชื่อ-นามสกุล:</p>
+                        <p><span><i class="fa-solid fa-building-columns"></i> </span>หมู่เรียน:</p>
+                        <p><span><i class="fa-solid fa-chalkboard-user"></i> </span> อาจารย์ที่ปรึกษา:</p>
+                        <p><span><i class="fa-brands fa-github"></i> </span>Githup:</p>
+                    </div>
+                    <div>
+                        <p>674259024</p>
+                        <p>สมหมาย สุภาวงศ์</p>
+                        <p>67/50</p>
+                        <p>อาจารย์ ดร.อุษณีย์ ภักดีตระกูลวงศ์</p>
+                        <a href="https://github.com/Sommai-Supawong"
+                            class="btn-link-external">github.com/Sommai-Supawong</a>
+                    </div>
+                </div>
+            </div>
+            <img src="image/myImage.jpeg" class="image-me" alt="me" width="100px">
+        </div>
+        <div class="container-grades" id="2">
+            <div class="box-grade module-1"><span><i class="fa-solid fa-trophy"></i> </span>ปี 1 เทอม 1 : <span
+                    class="grade">4.00</span></div>
+            <div class="box-grade module-1"><span><i class="fa-solid fa-trophy"></i> </span>ปี 1 เทอม 2 : <span
+                    class="grade">3.92</span></div>
+            <div class="box-grade module-1"><span><i class="fa-solid fa-trophy"></i> </span>ปี 2 เทอม 1 : <span
+                    class="grade">3.94</span></div>
+        </div>
+        <div class="box-grade module-2" id="3"><span><i class="fa-solid fa-trophy"></i> </span>เกรดเฉลี่ยสะสม : 4.00 </div>
+    </div>
+    <footer>
+        <p>© 2026 My Grade Report BY Sommai Supawong. ID 674259024.</p>
+        <p><span><i class="fa-solid fa-building-columns"></i> </span>Nakhon Pathom Rajabhat University</p>
+    </footer>
+</body>
+
+</html>
