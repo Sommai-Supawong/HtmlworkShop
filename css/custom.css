@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-section {
+    margin: 0 10px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    color: gray;
+}
+
+nav {
+    display: inline;
+    align-items: center;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    margin: 0 40px 0 40px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.tap-section {
+    height: 50px;
+    padding-left: 120px;
+    background: linear-gradient(to right, #00a2e8, #007bb5);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.btn-section {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: all 0.5s ease;
+}
+
+.btn-section:hover {
+    background-color: #007bb5;
+    border-radius: 4px;
+}
+
+.btn-social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #444444;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 2px solid #444444;
+    transition: all 0.5s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-5px);
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.container {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-card1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #989898;
+}
+
+
+.container-card1-subcard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-category {
+    width: 450px;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+
+    transition: all 0.5s ease;
+
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    gap: 0px;
+}
+
+.card-category:hover {
+    transform: scale(1.05);
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #00a2e8;
+    font-weight: bold;
+    gap: 2px;
+    transition: all 0.3s ease;
+}
+
+.read-more a {
+    text-decoration: none;
+    color: #00a2e8;
+}
+
+.read-more:hover {
+    transition: all 0.3s ease;
+    gap: 20px;
+}
+
+/*----------------- container ของ card content ส่วนด้านล่าง ---------------*/
+.container-contant {}
+
+.card-container-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container-right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---------------------card left----------------- */
+.card-content-left {
+    width: 600px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    gap: 0px;
+}
+
+
+
+.head-content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sticker {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #00a2e8, #007bb5);
+    border-radius: 50%;
+}
+
+.sticker p {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.sticker h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-image {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.read-more2 {
+    font-size: 24;
+    
+    color: #00a2e8;
+    border-left: 2px solid rgb(55, 55, 55);
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3 ease;
+}
+.read-more2 span{text-decoration: none;}
+
+.read-more2 :hover {
+    color: #007bb5;
+}
+
+.tag-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tag-item::before {
+    content: "•";
+    margin-right: 5px;
+    color: #000000;
+}
+
+.tag-item {
+    color: #00a2e8;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.tag-item:hover {
+    background-color: #d0d0d0;
+}
+
+/* ----------------------card  right --------------------------------- */
