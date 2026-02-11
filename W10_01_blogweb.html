@@ -87,7 +87,7 @@
         </div>
 
 
-        <div>
+        <div class="container-contant">
 
             <div class="card-container-left">
                 <!--------------------------- card left 1 ------------------------------>
@@ -110,7 +110,7 @@
                     <div class="read-more2"><a href="">Read more</a></div>
                     <div class="tag-section">
                         <strong>Tags:</strong>
-                        <span class="tag-item">responsive design</span>
+                        <span class="tag-none">responsive design</span>
                         <span class="tag-item">media queries</span>
                         <span class="tag-item">flexbox</span>
                         <span class="tag-item">CSS grid</span>
@@ -126,28 +126,229 @@
                         </div>
                     </div>
                     <h3>เปรียบเทียบ display: block vs inline-block</h3>
-                    <p>ภาพตัวอย่างการแสดงผล responsive บนอุปกรณ์ต่างๆ
-                        รวมคำสั่ง CSS ที่จำเป็นสำหรับการสร้างเว็บไซต์ที่รองรับทุกขนาดหน้าจอ เริ่มจาก media queries,
-                        flexbox,
-                        grid layout และเทคนิคการใช้ viewport units เพื่อให้เว็บของคุณดูดีในทุกอุปกรณ์ …</p>
-                    <div class="read-more2"><a href="">Read more</a></div>
+                    <p>ตารางด้านล่างแสดงความแตกต่างระหว่าง display: block และ display: inline-block
+                        เพื่อช่วยให้เข้าใจการเลือกใช้ display property ที่เหมาะสม</p>
+
+                    <h3 class="title">เลือกใช้ display property ที่เหมาะสม</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="head-title">คุณสมบัติ</th>
+                                <th class="head-title">display: block</th>
+                                <th class="head-title">display: inline-block</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">การจัดเรียงองค์ประกอบ</td>
+                                <td>📦 แต่ละตัวอยู่บรรทัดใหม่</td>
+                                <td>✅ เรียงต่อกันในบรรทัดเดียว</td>
+                            </tr>
+                            <tr>
+                                <td class="label">ความกว้างเริ่มต้น</td>
+                                <td><span class="red-text">❌ กินพื้นที่เต็มความกว้าง (100%)</span></td>
+                                <td>✅ ตามเนื้อหาภายใน (auto)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">การกำหนด width และ height</td>
+                                <td>✅ กำหนดได้ทั้ง width และ height</td>
+                                <td>✅ กำหนดได้ทั้ง width และ height</td>
+                            </tr>
+                            <tr>
+                                <td class="label">margin และ padding</td>
+                                <td>✅ ใช้ได้ครบทุกทิศทาง</td>
+                                <td>✅ ใช้ได้ครบทุกทิศทาง</td>
+                            </tr>
+                            <tr>
+                                <td class="label">vertical-align</td>
+                                <td><span class="red-text">❌ ไม่มีผลกับ block element</span></td>
+                                <td>✅ สามารถใช้ได้ (top, middle, bottom)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">ช่องว่างระหว่างองค์ประกอบ</td>
+                                <td>🚫 ไม่มีปัญหาช่องว่าง</td>
+                                <td><span class="red-text">❌ มีช่องว่างจาก whitespace ใน HTML</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">การใช้งานที่เหมาะสม</td>
+                                <td>📄 div, section, header, footer</td>
+                                <td>🎯 navigation menu, button groups</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>สรุป:</strong> display: block เหมาะสำหรับโครงสร้างหลักของหน้าเว็บ ส่วน display:
+                        inline-block เหมาะสำหรับการสร้างเมนู หรือองค์ประกอบที่ต้องเรียงต่อกันTags: CSS•display property
+                    </p>
                     <div class="tag-section">
                         <strong>Tags:</strong>
-                        <span class="tag-item">responsive design</span>
-                        <span class="tag-item">media queries</span>
-                        <span class="tag-item">flexbox</span>
-                        <span class="tag-item">CSS grid</span>
+                        <span class="tag-none">CSS</span>
+                        <span class="tag-item">display</span>
+                        <span class="tag-front">property</span>
+                    </div>
+                </div>
+                <!--------------------------- card left 3 ------------------------------>
+                <div class="card-content-left-center" style="background-color: #f3f5f6; ">
+                    <h1 style="display: flex; justify-content: center; align-items: center; ">📞 ติดต่อเรา</h1>
+
+                    <div class="contact-card">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>ชื่อ *</label>
+                                    <input type="text" placeholder="ชื่อจริง">
+                                </div>
+                                <div class="form-group">
+                                    <label>นามสกุล *</label>
+                                    <input type="text" placeholder="นามสกุล">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>อีเมล *</label>
+                                    <input type="email" placeholder="example@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>เบอร์โทรศัพท์</label>
+                                    <input type="tel" placeholder="080-123-4567">
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>บริษัท/องค์กร</label>
+                                <input type="text" placeholder="ชื่อบริษัทของคุณ">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>หัวข้อที่สนใจ *</label>
+                                <select>
+                                    <option value="">เลือกหัวข้อ</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>รายละเอียด *</label>
+                                <textarea placeholder="โปรดอธิบายรายละเอียดที่ต้องการปรึกษา..."></textarea>
+                            </div>
+
+                            <div class="interest-section">
+                                <label>ความสนใจเพิ่มเติม</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox"> ต้องการรับข่าวสารทาง email</label>
+                                    <label><input type="checkbox"> สนใจบริการปรึกษา</label>
+                                    <label><input type="checkbox"> สนใจความร่วมมือ</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">📨 ส่งข้อความ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------- card right---------------------->
+            <div class="card-container-right">
+                <!------------------------------- card right 1---------------------->
+                <div class="card-content-right">
+                    <div>
+                        <h4>สวัสดีครับ ยินดีต้อนรับ</h4>
+                        <p>ผมชื่อ Suksawat เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ
+                            SME และ Startup</p>
+                    </div>
+                    <img class="image-profile"
+                        src="https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2023-03/GettyImages-465395748.jpg.png.webp?itok=_i_yrnRV"
+                        alt="">
+                    <a href="https://www.facebook.com/sommai.supawong" target="_blank">
+                        <button class="fb-button">กดติดตามใน Facebook</button>
+                    </a>
+                </div>
+                <!------------------------------- card right 2---------------------->
+                <div class="card-content-right-center">
+                    <div class="card-news">
+                        <div class="head-card-title">
+                            <h3>📧 รับข่าวสารใหม่</h3>
+                        </div>
+                        <div class="form-newsand-contact">
+                            <label>ชื่อ *</label>
+                            <input type="text" placeholder="ชื่อจริง">
+                        </div>
+                        <div class="form-newsand-contact">
+                            <label>อีเมล *</label>
+                            <input type="email" placeholder="example@email.com">
+                        </div>
+                        <div class="form-newsand-contact full-width">
+                            <label> สนใจเนื้อหาด้านไหน *</label>
+                            <select>
+                                <option value=""> ทุกหัวข้อ</option>
+                            </select>
+                        </div>
+                        <button class="apply-btn module-1">🚀 สมัครเลย!</button>
                     </div>
                 </div>
 
+                <!------------------------------- card right 3---------------------->
+                <div class="card-content-right-center">
+                    <div class="card-contact-fast">
+                        <div class="head-card-title">
+                            <h3>💬 ติดต่อด่วน</h3>
+                        </div>
+                        <div class="form-newsand-contact">
+                            <label>ชื่อ *</label>
+                            <input type="text" placeholder="ชื่อจริง">
+                        </div>
+                        <div class="form-newsand-contact full-width">
+                            <label>เรื่องที่ต้องการติดต่อ *</label>
+                            <select>
+                                <option value="">เลือกเรื่องที่ติดต่อ</option>
+                            </select>
+                        </div>
+                        <div class="form-newsand-contact full-width">
+                            <label>ข้อความสั้นๆ *</label>
+                            <textarea placeholder="อธิบายสั้นๆ"></textarea>
+                        </div>
+                        <button class="apply-btn module-2">📤 ส่งเลย</button>
+                    </div>
+                </div>
+                <!------------------------------- card right 4---------------------->
+                <div class="card-content-right">
+                    <div>
+                        <h4>ชีวิตติดโปรฯ</h4>
+                    </div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0"></script>
+                    <div class="fb-scale-fix">
+                        <div class="fb-post"
+                            data-href="https://www.facebook.com/TidPromotion/posts/pfbid08zf559vbrNZuoDYsto6sm3DcQaWJpyG92gNYovV1f5RNNF8BBMBydxrvJJjeYEsql"
+                            data-width="350" data-show-text="true">
+                        </div>
+                    </div>
+                </div>
 
+                <!------------------------------- card right 5---------------------->
+                <div class="card-content-right">
+                    <div>
+                        <h4>Sponsor</h4>
+                    </div>
+                    <iframe width="300" height="315" src="https://www.youtube.com/embed/rSHa2EQCOrI?si=W9hVUGE9svDPalKx"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
-
-
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p class="copyright">© 2025 Sommai — All rights reserved.</p>
+        <p class="attribution">
+            Designed for educational/demo purposes • <a href="#" class="contact-link">Contact</a>
+        </p>
+    </div>
+</footer>
 
-    </div>
-    </div>
 </body>
 
 </html>
