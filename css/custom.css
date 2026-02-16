@@ -78,7 +78,7 @@ nav {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column  ;
     align-items: center;
     justify-content: center;
 }
@@ -93,14 +93,16 @@ nav {
 }
 
 .container-card1-subcard {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
+    align-items: center;
     margin: 10px;
     gap: 5px;
     flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
 }
-
 .card {
     display: flex;
     align-items: center;
@@ -442,7 +444,6 @@ textarea {
     font-family: "Kanit", sans-serif;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to right, #6973db, #7353ad);
     color: white;
     border: none;
     border-radius: 20px;
@@ -450,13 +451,14 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    transition: opacity 0.2s;
+    background-image: linear-gradient(to right, #6973db, #7353ad, #5a62c7, #62429a);
+    background-size: 300% 100%;
+    transition: all 0.4s ease-in-out;
 }
 
 .submit-btn:hover {
-    opacity: 0.9;
+    background-position: 100% 0;
 }
-
 
 
 
@@ -576,9 +578,8 @@ textarea {
     margin-bottom: 8px;
     color: #ffffff;
 }
-.apply-btn{
+.apply-btn {
     font-family: "Kanit", sans-serif;
-    background: linear-gradient(to right, #f0a796, #b1dec7);
     width: 100%;
     padding: 15px;
     color: white;
@@ -588,18 +589,34 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    transition: opacity 0.2s;
+    
+    background-size: 200% auto; 
+    transition: background-position 0.5s ease, transform 0.2s ease; 
 }
 
-.apply-btn:hover {
-    opacity: 0.9;
+.apply-btn:active {
+    transform: scale(0.98);
 }
+
 .apply-btn.module-1 {
-    background: linear-gradient(to right, #f0a796, #b1dec7);
-} 
-.apply-btn.module-2 {
- background: linear-gradient(to right, #ff7067, #ff8a55);}
+    background-image: linear-gradient(to right, #f0a796 0%, #b1dec7 51%, #f0a796 100%);
+}
 
+.apply-btn.module-1:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.apply-btn.module-2 {
+    background-image: linear-gradient(to right, #ff7067 0%, #ff8a55 51%, #ff7067 100%);
+}
+
+.apply-btn.module-2:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
