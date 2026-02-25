@@ -80,14 +80,15 @@ a:hover {
 /*===============navbar===============*/
 
 .main-nav {
-    background: linear-gradient(to right, #00a2e8, #007bb5);
+  background: linear-gradient(to right, #00a2e8, #007bb5);
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
 
-  flex-wrap: wrap;}
+  flex-wrap: wrap;
+}
 
 .nav-menu li a {
   color: #ffffff;
@@ -105,7 +106,7 @@ a:hover {
 /*===============hero-section===============*/
 
 .hero-content {
-    background-color: #cacaca;
+  background-color: #cacaca;
   padding: 30px 0;
   box-shadow: 0 4px 15px rgba(237, 213, 143, 0.1);
   margin-bottom: 30px;
@@ -193,6 +194,10 @@ a:hover {
 }
 
 /* post----------Main-Left----------- */
+.post-list{
+display: flex;
+flex-direction: column;
+}
 .card {
   background-color: white;
   border-radius: 4px;
@@ -200,7 +205,7 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.367);
 }
 
-.card+.card {
+.card + .card {
   margin-top: 7.5px;
 }
 
@@ -408,7 +413,7 @@ a:hover {
 /* ---------- Container ของฟอร์ม ---------- */
 .contact-form-main {
   /* max-width: 600px; */
-    font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif;
   width: 95%;
   border: 1px solid #e0e0e0;
   border-radius: 15px;
@@ -436,7 +441,6 @@ a:hover {
 
 /* ---------- Label ---------- */
 .form-label {
-
   display: block;
   font-size: 14px;
   font-weight: 600;
@@ -447,7 +451,7 @@ a:hover {
 .form-input,
 .form-select,
 .form-textarea {
-      font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif;
 
   width: 100%;
   padding: 12px 15px;
@@ -519,12 +523,11 @@ a:hover {
   cursor: pointer;
   color: #fff;
   transition: all 0.5s ease;
-
 }
 
 /* ปุ่มของฟอร์มหลัก */
 .contact-form-main .form-button {
- font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif;
   background: linear-gradient(45deg, #667eea, #764ba2);
 }
 
@@ -581,43 +584,55 @@ a:hover {
 }
 
 .apply-btn {
-    font-family: "Kanit", sans-serif;
-    width: 100%;
-    padding: 15px;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 
-    background-size: 200% auto;
-    transition: background-position 0.5s ease, transform 0.2s ease;
+  background-size: 200% auto;
+  transition:
+    background-position 0.5s ease,
+    transform 0.2s ease;
 }
 
 .apply-btn:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .apply-btn.module-1 {
-    background-image: linear-gradient(to right, #f0a796 0%, #b1dec7 51%, #f0a796 100%);
+  background-image: linear-gradient(
+    to right,
+    #f0a796 0%,
+    #b1dec7 51%,
+    #f0a796 100%
+  );
 }
 
 .apply-btn.module-1:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 
 .apply-btn.module-2 {
-    background-image: linear-gradient(to right, #ff7067 0%, #ff8a55 51%, #ff7067 100%);
+  background-image: linear-gradient(
+    to right,
+    #ff7067 0%,
+    #ff8a55 51%,
+    #ff7067 100%
+  );
 }
 
 .apply-btn.module-2:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 
 .icon-email {
@@ -700,7 +715,6 @@ a:hover {
   color: #333;
   background-color: var(--bg03);
 
-
   border-collapse: collapse;
 }
 
@@ -760,70 +774,77 @@ a:hover {
 /* --------------------back to home -------------------*/
 
 .btn-back-to-home {
-    font-family: "Kanit", sans-serif;
-    align-items: center;
-    display: inline-flex;
-     justify-content: center;
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
+  font-family: "Kanit", sans-serif;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 
-    background-size: 200% auto;
-    transition: background-position 0.5s ease, transform 0.2s ease;
-     background-image: linear-gradient(to right, #f0a796 0%, #b1dec7 51%, #f0a796 100%);
+  background-size: 200% auto;
+  transition:
+    background-position 0.5s ease,
+    transform 0.2s ease;
+  background-image: linear-gradient(
+    to right,
+    #f0a796 0%,
+    #b1dec7 51%,
+    #f0a796 100%
+  );
 }
 
 .btn-back-to-home:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* -----------------------footer----------------------------- */
 
 .site-footer {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .copyright {
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0 0 8px 0;
-    letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
 }
 
 .attribution {
-    font-size: 13px;
-    color: #a0a0a0;
+  font-size: 13px;
+  color: #a0a0a0;
 }
 
 .contact-link {
-    color: #00a2e8;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.3s ease;
-    direction: none;
+  color: #00a2e8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  direction: none;
 }
 
 .contact-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 
-
+/* =====================responsive design================= */
 @media (max-width: 922px) {
   .site-header {
     background-color: #98d0f5;
@@ -858,72 +879,90 @@ a:hover {
 
 /* ซ่อน */
 #burger-menu {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .site-header {
+    background-color: #2d72f1;
+  }
+  /* กำหนดขนาด/พื่นที่ */
+
+  /* กำหนดขนาด/พื้นที่ของปุ่ม */
+  #burger-menu {
+    display: block;
+    height: 25px;
+    width: 30px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  /* วาด “เส้น 3 ขีด” ด้วย span + pseudo elements */
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease;
+    content: "";
+  }
+
+  /* จัดตำแหน่ง 3 เส้น (บน/กลาง/ล่าง) */
+
+  #burger-menu span {
+    top: 11px;
+  }
+  #burger-menu span::before {
+    top: -8px;
+  }
+  #burger-menu span::after {
+    top: 8px;
+  }
+
+  /* Animation เมื่อกด */
+
+  /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+  #burger-menu.close span {
+    background: transparent;
+  }
+
+  /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+  /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+  #burger-menu.close span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+  #burger-menu.close span:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  #menu {
     display: none;
+    flex-direction: column; 
+    background-color: #00a1e7;
+  }
+
+  #menu.overlay {
+    display: flex;
+  }
 }
 
-  @media (max-width: 576px) {
-    .site-header {
-        background-color: #2d72f1;
-    }
-    /* กำหนดขนาด/พื่นที่ */
+/* =============== order card ==================== */
+/* ค่าลบ ตัวที่ติดลบมากสุด จะอยู่บน */
+.order-image01 { order:-1}
+.order-table02 { order:-2}
+.order-contact03 { order:-3}
 
-/* กำหนดขนาด/พื้นที่ของปุ่ม */
-    #burger-menu {
-        display: block;
-        height: 25px;
-        width: 30px;
-        position: relative;
-        z-index: 1000;
-        cursor: pointer;
-    }
-
-    /* วาด “เส้น 3 ขีด” ด้วย span + pseudo elements */
-    #burger-menu span,
-    #burger-menu span::before,
-    #burger-menu span::after {
-        background-color: #fff;
-        height: 3px;
-        width: 100%;
-        position: absolute;
-        display: block;
-        transition: all 0.3s ease;
-        content: "";
-    }
-
-    /* จัดตำแหน่ง 3 เส้น (บน/กลาง/ล่าง) */
-
-    #burger-menu span { top: 11px; }
-    #burger-menu span::before { top: -8px; }
-    #burger-menu span::after {top : 8px; }
-
-    /* Animation เมื่อกด */
-
-    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
-    #burger-menu.close span {
-        background: transparent;
-    }
-
-    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
-    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
-    #burger-menu.close span:before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
-    #burger-menu.close span:after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    #menu {
-        display: none;
-        flex-direction: column;
-        background-color: #00a1e7;
-    }
-
-    #menu.overlay {
-        display: flex;
-    }
-
-}
+/* ค่าบวกเรียงลำดับปกติ  1 2 3 ค่าน้อยอยู่บนสุด */
+.order-widget01 { order:5}
+.order-widget02 { order:4}
+.order-widget03 { order:3}
+.order-widget04 { order:2}
+.order-widget05 { order:1}

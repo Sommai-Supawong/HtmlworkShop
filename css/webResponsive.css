@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: rgb(14, 111, 207);
+    --secondary-color: rgb(2, 2, 2);
+    --background-color: #f5f5f5;
+    --text-color-normal: #000;
+    --box-shadow: 0px 2px 10px #00000056;
+    --base-white-color: #fff;
+
+    --btn-signup-gradient: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    --btn-signup-gradient-hover: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+    --btn-base-gradient: linear-gradient(to right, #ff5e00 0%, #f30505e3 100%);
+    --btn-base-gradient-hover: linear-gradient(to right, #f30505e3 0%, #ff5e00 100%);
+    --btn-login-gradient-hover: linear-gradient(to right, #000000 0%, #4e4e4e 100%);
+    --btn-shadow: 0px 2px 15px #00000056;
+
+    --bg-color-gray: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'kanit', sans-serif;
+    color: var(--text-color-normal);
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+}
+
+.header-container {
+    background-color: var(--background-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.brand {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.header-button {}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    list-style: none;
+
+    margin-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+}
+
+
+/*    Button Style    */
+.btn-primary {
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: var(--btn-base-gradient);
+    color: var(--base-white-color);
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+    transition: all 0.3s ease;
+
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-base-gradient-hover);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+.btn-signup {
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: var(--btn-signup-gradient);
+    color: var(--base-white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-signup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-signup-gradient-hover);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-signup:hover::before {
+    opacity: 1;
+}
+
+.btn-login {
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    background-color: var(--base-white-color);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-color);
+    color: var(--base-white-color);
+}
+
+
+
+/*    Main Section    */
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+
+/*    HERO Section    */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    width: 60%;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+}
+
+.right-side {
+    width: 40%;
+
+    img {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/*  SaaS Solution Section    */
+.bg-gray {
+    background-color: var(--bg-color-gray);
+    padding: 30px 0;
+}
+
+.solution {
+    margin-top: 50px;
+    padding: 50px 20px;
+}
+
+.solution-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+.solution-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    box-shadow: var(--box-shadow);
+    background-color: var(--base-white-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+    h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+
+/*    Customize Section    */
+
+.customize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+
+    padding: 30px 0;
+
+}
+
+
+/*   Dedicated  Support Section    */
+
+.support {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row-reverse;
+    gap: 30px;
+
+        {
+        .order-text {
+            order: 2
+        }
+
+        ;
+
+        .order-photo {
+            order: 1
+        }
+
+        ;
+    }
+}
+
+
+
+/*    Discover Section    */
+
+.discover {
+    margin-top: 50px;
+}
+
+.discover-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+
+/*    Footer Section    */
+
+footer {
+    background-color: var(--primary-color);
+    padding: 40px 20px;
+    color: var(--base-white-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left {
+    .logo{
+        display: grid;
+        align-items: center;
+
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 2rem;
+        color: var(--secondary-color);
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+.footer-right {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-item {
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 4px;
+
+            a {
+                text-decoration: none;
+                color: var(--base-white-color);
+            }
+
+            a:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+/* ------------------form table---------------- */
+.recomentation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.form-title {
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-bottom: 1.5rem ;
+}
+.form-group{
+    flex: 1;
+}
+.form-group label{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.form-input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--base-white-color);
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+.form-select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--base-white-color);
+    outline: none;
+}
+

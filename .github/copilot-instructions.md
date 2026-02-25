@@ -2,65 +2,84 @@
 
 ## Project Overview
 
-This is an HTML/CSS learning workshop project featuring multiple educational modules on HTML fundamentals (headings, formatting, links, images, etc.) with modern, responsive styling. Each module is a standalone HTML file demonstrating specific web concepts.
+HTML/CSS learning workshop with standalone educational modules (W04_1_Headings.html, W06_03_HTMLlinks.html, etc.). No build process—files serve directly to browsers. Central landing page is `index.html`; advanced blog template in `W10_01_blogweb.html` linked to dedicated stylesheet `css/blogweb.css`.
 
 ## Architecture & Structure
 
-- **Content Pages**: Individual `.html` files (W04_1_Headings.html, W06_03_HTMLlinks.html, etc.) represent separate workshop modules
-- **Index**: `index.html` serves as the main landing page with navigation to all modules
-- **Styling**: Global styles in `css/style.css` with many pages using embedded `<style>` tags for quick iteration
-- **Assets**: `image/` folder contains images; external assets (fonts, icons) loaded from CDNs
+**Three Stylesheet Zones:**
+1. **Global styles**: `css/style.css` (used by W04-W07 modules) — sets `.container` (900px max), header positioning, base colors
+2. **Blog styles**: `css/blogweb.css` (independent, used by W10_01_blogweb.html) — `.wrapper` pattern (1100px max), navbar gradients, hero sections
+3. **Embedded styles**: Each module page has `<style>` tags for page-specific tweaks (card designs, module colors)
 
-## Key Design Patterns
+**Module Naming Convention:**
+- `W04_*`: HTML basics (headings, formatting)
+- `W06_*`: HTML intermediate (links)
+- `W07_*`: HTML intermediate (images)
+- `W10_*`: Advanced projects (blog, multi-section layouts)
 
-### Styling Conventions
+## Critical Styling Patterns
 
-1. **Kanit Font**: All pages use `font-family: 'Kanit', sans-serif` (imported from Google Fonts)
-2. **Card Component**: Consistent white `.card` containers with:
-   - `border-radius: 12px` to `25px`
-   - `box-shadow: 0 4px 12px rgba(...)` for depth
-   - Border-top accent colors (default `#c4005a`)
-3. **Color Scheme**:
-   - Primary accent: `#c4005a` (pink/magenta) or `#ff0066`
-   - Secondary: `#333` (dark text), `#555` (gray text)
-   - Module-specific gradients (see `myGrade.html` for examples)
-4. **Interactive Effects**:
-   - Smooth transitions: `transition: all 0.3s ease` or `transition: 0.9s`
-   - Hover transforms: `transform: translateY(-10px)` for lift effect
-   - Rainbow gradient text animations (used in `index.html` navigation links)
+### Core Design System
+- **Font**: Kanit (Thai-optimized) imported from Google Fonts; fallback to sans-serif
+- **Primary colors**: `#c4005a` (pink, borders/accents) or `#ff0066` (alternate accent)
+- **Text colors**: `#333` (dark), `#555` (medium), `#999` (light)
+- **Card component**: White bg, `border-radius: 12px`, `border-top: 4px solid #c4005a`, `box-shadow: 0 4px 12px rgba(0,0,0,0.08)`
 
-### Layout Patterns
+### Interactive Animations
+- **Hover effect**: `transform: translateY(-10px)` with `transition: 0.3s ease` on cards/links
+- **Rainbow gradient text**: Used in `index.html` nav links—applies animated multi-color gradient with `background-clip: text`
+- **Smooth scroll**: `scroll-behavior: smooth` on html; modules add `scroll-padding-top: 250px` for fixed headers
 
-- **Container**: `.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }`
-- **Fixed Header**: Set `position: fixed; top: 0; width: 100%` with `scroll-padding-top: 250px` on html
-- **Flexbox Navigation**: Use `.btn-text-link` as flex container with `gap: 10px` for button groups
-- **Responsive**: Include `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+### Layout Structure
+- **Simple modules** (W04-W07): `.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }`
+- **Blog** (W10): `.wrapper { width: 1100px; max-width: 90%; margin: 0 auto; }` for sidebar layouts
+- **Fixed navigation**: `position: fixed; top: 0; width: 100%;` on `.header` (W10 uses `.site-header + .main-nav`)
 
-## Content Conventions
+## Content & Component Patterns
 
-- Page structure: `<header>` (nav) → `<section class="container">` (content cards) → `<footer>`
-- Code examples shown in `<pre>` tags with left border: `border-left: 4px solid #c4005a`
-- Learning notes in `.note` divs with emoji prefix (`💡 `)
-- Links formatted with `text-decoration: none` and custom hover effects
+- **Page template**: `<header>` (nav) → `<section class="container">` (content) → `<footer>`
+- **Code blocks**: `<pre>` with `background: #f0f0f0`, `border-left: 4px solid #c4005a`
+- **Notes**: `.note` div with `::before { content: "💡 "; }` for emoji prefix
+- **Buttons**: `.read-more` links in hero sections; blog uses flexbox nav with hover underlines
+- **Responsive**: All pages include `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
-## Common Edits & Workflows
+## Development Workflows
 
-- **Update Navigation**: Edit the nav links in `index.html` or individual page headers (often duplicated per page)
-- **Add Modules**: Create new `.html` file following W04/W06/W07 naming pattern, copy header structure from existing pages
-- **Global Style Changes**: Prefer `css/style.css` for shared styles; use embedded `<style>` for page-specific tweaks
-- **Color Updates**: Search for hex colors like `#c4005a`, `#ff0066`, or class names like `.module-1`, `.module-2`, `.module-3`
+**Adding a Module:**
+1. Create `W0X_##_topic.html` following nearest W0X pattern
+2. Copy header/footer from similar module
+3. Add embedded `<style>` tag with `.container` + `.card` styling
+4. Decide: use `css/style.css` or create embedded styles for consistency
 
-## Important Notes
+**Styling Changes:**
+- **Shared**: Edit `css/style.css` (affects all W04-W07 modules)
+- **Blog only**: Edit `css/blogweb.css` (only W10_01_blogweb.html)
+- **One page**: Use embedded `<style>` in that `.html` file
 
-- Some pages have embedded styles overlapping `css/style.css` — check both locations when styling
-- Font imports vary: some pages use Google Fonts Kanit, others reference system fonts; keep consistent
-- External dependencies: Font Awesome icons (CDN link in myGrade.html), Google Fonts (multiple pages)
-- No build process — files serve directly; test locally by opening `.html` files in browser
+**Navigation Updates:**
+- `index.html` has inline `<a>` tags with gradient hover effects—update here for main landing
+- Each W0X module duplicates its own header with links (check multiple places)
+- Blog uses `<ul class="nav-menu">` inside `.main-nav`
+
+## Critical Dependencies & Integration Points
+
+- **Google Fonts**: Every page loads Kanit from CDN; some also use `<link rel="stylesheet" href="...">` 
+- **Font Awesome Icons**: Loaded in `W10_01_blogweb.html` and `myGrade.html` (`css/all.min.css` from CDN)
+- **Images**: Stored in `image/` folder; blog also uses external image URLs (background images)
+- **No JavaScript**: All interactivity via CSS (animations, hover states, gradients)
+
+## Important Caveats
+
+- **Overlapping styles**: `css/style.css` and embedded styles can conflict—embedded wins (higher specificity). Always check both when debugging.
+- **Font inconsistency**: Some pages hardcode `font-family: kanit, sans-serif` instead of inheriting—look for inline style declarations
+- **Fixed header spacing**: W04-W07 pages add `scroll-padding-top: 250px` on `html` to offset fixed header. Blog (W10) doesn't have this set—may need adjustment.
+- **No minification or build**: All files are human-readable source; test directly in browser
 
 ## File Reference Map
 
-- **Headings module**: [W04_1_Headings.html](W04_1_Headings.html)
-- **Links module**: [W06_03_HTMLlinks.html](W06_03_HTMLlinks.html)
-- **Images module**: [W07_04_image.html](W07_04_image.html)
-- **Grade tracking**: [myGrade.html](myGrade.html) (advanced styling example with gradients & cards)
-- **Shared styles**: [css/style.css](css/style.css)
+- **Landing page**: `index.html` (rainbow nav animation example)
+- **Headings module**: `W04_1_Headings.html` (card + note patterns)
+- **Blog template**: `W10_01_blogweb.html` (complex layout with navbar, hero, sidebar)
+- **Grade tracker**: `myGrade.html` (gradient cards, Font Awesome icons)
+- **Global styles**: `css/style.css` (W04-W07 consistency)
+- **Blog styles**: `css/blogweb.css` (independent, 958 lines, `.wrapper` pattern)
