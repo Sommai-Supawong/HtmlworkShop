@@ -15,7 +15,9 @@
     --btn-login-gradient-hover: linear-gradient(to right, #000000 0%, #4e4e4e 100%);
     --btn-shadow: 0px 2px 15px #00000056;
 
-    --bg-color-gray: #f1f1f1;
+    --bg-color-gray: #e2e2e2;
+
+    --btn-purple: rgb(236, 10, 236);
 }
 
 * {
@@ -186,7 +188,35 @@ nav ul {
     color: var(--base-white-color);
 }
 
+.btn-back-to-home {
+    font-family: "Kanit", sans-serif;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
 
+    background-size: 200% auto;
+    transition:
+        background-position 0.5s ease,
+        transform 0.2s ease;
+    background-image: linear-gradient(to right,
+            #f0a796 0%,
+            #b1dec7 51%,
+            #f0a796 100%);
+}
+
+.btn-back-to-home:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
 
 /*    Main Section    */
 
@@ -312,19 +342,17 @@ nav ul {
     flex-direction: row-reverse;
     gap: 30px;
 
-        {
-        .order-text {
-            order: 2
-        }
-
-        ;
-
-        .order-photo {
-            order: 1
-        }
-
-        ;
+    .order-text {
+        order: 2
     }
+
+    ;
+
+    .order-photo {
+        order: 1
+    }
+
+    ;
 }
 
 
@@ -360,13 +388,14 @@ footer {
 }
 
 .footer-left {
-    .logo{
+    .logo {
         display: grid;
         align-items: center;
 
         gap: 10px;
         margin-bottom: 20px;
     }
+
     h3 {
         font-size: 2rem;
         color: var(--secondary-color);
@@ -376,6 +405,7 @@ footer {
         font-size: 1.2rem;
         margin-bottom: 20px;
     }
+
     img {
         width: 40px;
         height: auto;
@@ -410,7 +440,13 @@ footer {
         }
     }
 }
+
 /* ------------------form table---------------- */
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .recomentation-form {
     display: flex;
     flex-direction: column;
@@ -418,47 +454,304 @@ footer {
     margin: 0 auto;
     max-width: 800px;
 }
+
 .form-title {
     font-weight: 500;
 }
-.form-row{
+
+.form-row {
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
-    margin-bottom: 1.5rem ;
+    margin-bottom: 1.5rem;
 }
-.form-group{
+
+.form-group {
     flex: 1;
 }
-.form-group label{
+
+.form-group label {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
-.form-input{
+
+.form-input,
+.form-textarea,
+.form-select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: var(--base-white-color);
-}
-.form-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
-}
-.form-select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
-}
-.form-select{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--bg-color-gray);
     border-radius: 5px;
     background-color: var(--base-white-color);
     outline: none;
 }
 
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+
+/* container form input  */
+.form-radio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio-item,
+.checkbox-item {
+    display: flex;
+    border: 1px solid var(--bg-color-gray);
+    border-radius: 5px;
+    padding: 6px;
+    margin: 6px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    input[type="radio"] {
+        accent-color: var(--btn-purple)
+    }
+
+    input[type="checkbox"] {
+        accent-color: var(--btn-purple)
+    }
+}
+
+.radio-item:hover,
+.checkbox-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.radio-item input:checked+span,
+.checkbox-item input:checked+span {
+    color: var(--btn-purple)
+}
+
+.form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid black;
+    padding: 32px;
+}
+
+/* text area */
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ___________responsive design____________ */
+@media (max-width: 768px) {
+    .header-button {
+        display: none;
+    }
+
+    .hero,
+    .customize,
+    .support {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100;
+    }
+
+    .solution-content,
+    .discover-content {
+        grid-template-columns: 1fr
+    }
+
+    .order-text {
+        order: 2;
+    }
+
+    .order-photo {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .footer-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    nav {
+        display: none;
+    }
+  
+
+  
+
+    .form-row,
+    .form-radio,
+    .form-checkbox {
+        flex-direction: column;
+    }
+
+/* แสดง hamburger */
+
+    /* กำหนดขนาด/พื้นที่ของปุ่ม */
+    #burger-menu {
+        display: block;
+        cursor: pointer;
+        height: 25px;
+        width: 30px;
+        position: relative;
+        z-index: 1000;
+        /* ให้อยู่เหนือเมนูเต็มจอ */
+    }
+
+
+    /* วาด “เส้น 3 ขีด” ด้วย span + pseudo elements */
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+        background: var(--secondary-color);
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        transition: 0.3s ease;
+        content: "";
+    }
+
+
+    /* จัดตำแหน่ง 3 เส้น (บน/กลาง/ล่าง) */
+
+    /* วางเส้น “กลาง” ไว้กลาง ๆ ปุ่ม */
+    #burger-menu span {
+        top: 11px;
+    }
+
+    /* ให้มัน “ขยับขึ้น” ไปเป็นเส้นบน */
+    #burger-menu span:before {
+        top: -8px;
+    }
+
+    /* ขยับลงไปเป็นเส้นล่าง */
+    #burger-menu span:after {
+        top: 8px;
+    }
+
+
+
+    /* (----เพิ่ม----) ให้กล่อง header เป็นจุดอ้างอิงเมนู */
+    .header-container {
+        position: relative;
+    }
+
+
+/* แก้ตรงนี้ใหม่ -----  ซ่อนเมนู */
+   
+    #menu {
+        /* เปลี่ยนจาก display:none เป็นกล่องลอยแบบ absolute */
+        display: none;
+
+        flex-direction: column;
+        background: var(--primary-color);
+        /* ยังซ่อนเหมือนเดิม */
+
+        position: absolute;
+        /* สำคัญ: ลอยเมนู */
+
+        top: calc(100% + 10px);
+        /* ใต้แถบ header */
+
+        right: 0;
+        /* ชิดขวา ใกล้ burger */
+
+        width: 290px;
+        /* ✅ กว้างขึ้น */
+
+        padding: 10px;        
+        border-radius: 14px;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+        z-index: 999;
+
+
+        /* max-width: 92vw; */
+        /* กันล้นจอบนมือถือ */
+    }
+
+  /*==== (end เพิ่ม) ==== */
+
+
+    /* เปิดเมนูเมื่อ active  แสดงเมนูขึ้นมา*/
+    #menu.overlay {
+        display: flex;
+    }
+
+    /* Animation เมื่อกด */
+
+    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+    #burger-menu.close span {
+        background: transparent;
+    }
+
+    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+    #burger-menu.close span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+    #burger-menu.close span:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+/* ----------------------------------- */
+
+    /* Navbar */
+
+    .nav-menu {
+        flex-direction: column;
+        display: block;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+
+    .nav-menu li a {
+        display: block;
+        color: var(--base-white-color);
+    }
+
+    .nav-menu li:hover {
+        background-color: var(--base-white-color);
+    }
+
+    .nav-menu li:hover a {
+        color: var(--primary-color);
+    }
+}

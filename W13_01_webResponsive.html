@@ -16,8 +16,8 @@
                     <img src="https://www.pngplay.com/wp-content/uploads/13/Symbol-Logo-Transparent-Image.png" alt="">
                     <h1 class="brand">TechVault</h1>
                 </div>
-                <nav>
-                    <ul>
+                <nav id="menu">
+                    <ul class="nav-menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Solutions</a></li>
                         <li><a href="#">Pricing</a></li>
@@ -31,6 +31,9 @@
                 <button class="btn-login">Login</button>
             </div>
 
+            <div id="burger-menu">
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -81,7 +84,7 @@
 
     <div class="container">
         <section class="customize">
-            <div class="left-side">
+            <div class="left-side order-text">
                 <h2>Customizable Technology Stack</h2>
                 <p>Our IT solutions are flexible and tailored to your enterprise needs. Choose from a comprehensive
                     suite of
@@ -91,7 +94,7 @@
                     operations and reduce infrastructure costs while maintaining security and compliance standards.</p>
                 <button class="btn-primary">Learn more</button>
             </div>
-            <div class="right-side">
+            <div class="right-side order-photo">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400"
                     alt="Server technology">
             </div>
@@ -175,23 +178,24 @@
     <div class="bg-gray">
         <div class="container">
             <div class="item">
-                <h2>🔍 Find Your Ideal IT Solution</h2>
+                <h2 class="form-title">🔍 Find Your Ideal IT Solution</h2>
                 <form action="" method="" class="recomentation-form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name" >Name:</label>
+                            <label for="name">Name:</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" class="form-input">
                         </div>
                         <div class="form-group">
-                            <label for="email" >Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-input">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email"
+                                class="form-input">
                         </div>
                     </div>
 
                     <div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="business-type" >Business Type:</label>
+                                <label for="business-type">Business Type:</label>
                                 <select name="business" id="business" class="form-select">
                                     <option value="">Select your business type</option>
                                     <option value="small">Small Business</option>
@@ -199,8 +203,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="Current-Infrastructure" class="form-title">Current Infrastructure:</label>
-                                <select name="infrastructure" id="current-infrastructure"  class="form-select">
+                                <label for="Current-Infrastructure">Current Infrastructure:</label>
+                                <select name="infrastructure" id="current-infrastructure" class="form-select">
                                     <option value="">Select infrastructure type</option>
                                     <option value="on-prem">On-Premises</option>
                                     <option value="cloud">Cloud-Based</option>
@@ -208,8 +212,8 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group" >
-                                <label for="IT-Expertise" >IT Expertise Level:</label>
+                            <div class="form-group">
+                                <label for="IT-Expertise">IT Expertise Level:</label>
                                 <select name="expertise" id="IT-Expertise" class="form-select">
                                     <option value="">Select expertise level</option>
                                     <option value="beginner">Beginner</option>
@@ -218,8 +222,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="Annual-Budget" >Annual IT Budget:</label>
-                                <select name="budget" id="annual-budget"  class="form-select">
+                                <label for="Annual-Budget">Annual IT Budget:</label>
+                                <select name="budget" id="annual-budget" class="form-select">
                                     <option value="">Select budget range</option>
                                     <option value="low">$0 - $10,000</option>
                                     <option value="medium">$10,001 - $50,000</option>
@@ -230,47 +234,62 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Support-Required" >Support Required:</label>
-                        <label for="minimal">
-                            <input type="radio" id="minimal" name="support" value="minimal">
-                            Minimal Support
-                        </label>
-                        <label for="business-hours">
-                            <input type="radio" id="business-hours" name="support" value="business-hours">
-                            Business Hours Support
-                        </label>
-                        <label for="24-5-support">
-                            <input type="radio" id="24-5-support" name="support" value="24-5-support">
-                            24/5 Premium Support
-                        </label>
-                        <label for="24-7-support">
-                            <input type="radio" id="24-7-support" name="support" value="24-7-support">
-                            24/7 Premium Support
-                        </label>
+                        <label for="Support-Required">Support Required:</label>
+                        <div class="form-radio">
+                            <label for="minimal" class="radio-item">
+                                <input type="radio" id="minimal" name="support" value="minimal">
+                                <span>Minimal Support</span>
+                            </label>
+                            <label for="business-hours" class="radio-item">
+                                <input type="radio" id="business-hours" name="support" value="business-hours">
+                                <span>Business Hours Support</span>
+                            </label>
+                            <label for="24-5-support" class="radio-item">
+                                <input type="radio" id="24-5-support" name="support" value="24-5-support">
+                                <span>24/5 Premium Support</span>
+                            </label>
+                            <label for="24-7-support" class="radio-item">
+                                <input type="radio" id="24-7-support" name="support" value="24-7-support">
+                                <span>24/7 Premium Support</span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="key-requirements" >Key Requirements:</label>
-                        <label for="security-compliance"><input type="checkbox" id="security-compliance" name="requirements"
-                                value="security-compliance"> High Security & Compliance</label>
-                        <label for="seamless-integration"><input type="checkbox" id="seamless-integration"
-                                name="requirements" value="seamless-integration"> Seamless Integration</label>
-                        <label for="low-maintenance"><input type="checkbox" id="low-maintenance" name="requirements"
-                                value="low-maintenance"> Low Maintenance</label>
-                        <label for="high-performance"><input type="checkbox" id="high-performance" name="requirements"
-                                value="high-performance"> High Performance</label>
-                        <label for="cost-optimization"><input type="checkbox" id="cost-optimization" name="requirements"
-                                value="cost-optimization"> Cost Optimization</label>
+                        <label for="key-requirements">Key Requirements:</label>
+
+                        <div class="form-checkbox">
+                            <label class="checkbox-item" for="security-compliance"><input type="checkbox"
+                                    id="security-compliance" name="requirements" value="security-compliance"> <span>High
+                                    Security & Compliance</span></label>
+                            <label class="checkbox-item" for="seamless-integration"><input type="checkbox"
+                                    id="seamless-integration" name="requirements" value="seamless-integration">
+                                <span>Seamless Integration</span></label>
+                            <label class="checkbox-item" for="low-maintenance"><input type="checkbox"
+                                    id="low-maintenance" name="requirements" value="low-maintenance"> <span>Low
+                                    Maintenance</span></label>
+                            <label class="checkbox-item" for="high-performance"><input type="checkbox"
+                                    id="high-performance" name="requirements" value="high-performance"> <span>High
+                                    Performance</span></label>
+                            <label class="checkbox-item" for="cost-optimization"><input type="checkbox"
+                                    id="cost-optimization" name="requirements" value="cost-optimization"> <span>Cost
+                                    Optimization</span></label>
+                        </div>
                     </div>
-                    <div>
-                        <button type="submit" class="btn-primary">Find Your Solution</button>
-                        <button type="reset" class="btn-secondary"></button>🔄 Reset Form</button>
+                    <div class="form-group">
+                        <label for="Detail">More Detail:</label>
+                        <textarea name="" id="Detail" placeholder="โปรดอธิบาย" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="btn-signup">Find Your Solution</button>
+                        <button type="reset" class="btn-login">Reset Form</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
+        <!-- <button class="btn-back-to-home"><a href="index.html">Back to HTML Tutorial</a></button> -->
 
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -313,7 +332,27 @@
             </div>
         </div>
     </footer>
+<script>
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
 
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
