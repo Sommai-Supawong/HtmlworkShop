@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>web Travel Bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- font kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgb(0, 0, 0), rgb(255, 123, 0));
+            color: white;
+            padding: 80px 0;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px;
+        }
+
+        .btn-orange-deep {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #fd7e14;
+            /* สีส้มมาตรฐาน Bootstrap */
+            --bs-btn-border-color: #fd7e14;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #e8590c;
+            /* ส้มที่เข้มขึ้น */
+            --bs-btn-hover-border-color: #d9480f;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #d9480f;
+            --bs-btn-active-border-color: #bc3908;
+            box-shadow: 0 4px 6px rgba(253, 126, 20, 0.2);
+            /* เพิ่มเงาสีส้มจางๆ */
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-orange-deep:hover {
+            transform: translateY(-2px);
+            /* เอฟเฟกต์ลอยขึ้นเมื่อวางเมาส์ */
+            box-shadow: 0 6px 12px rgba(253, 126, 20, 0.3);
+        }
+
+        .contact-container {
+            background: linear-gradient(135deg, rgb(0, 0, 0), rgb(16, 187, 0));
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark px-5  sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Maiy Web <span><i class="bi bi-backpack2"></i></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features">ข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table-section">บริการ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact">ติดต่อ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!---------------------------------------------Carousel------------------------------------------------------------ -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" carousel-fade>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="https://blog.3bee.com/_next/image/?url=https%3A%2F%2Fapi-backend-assets.s3.eu-south-1.amazonaws.com%2Fprivate%2Ffiler_public%2F13%2F19%2F13198eb1-0bff-42c7-a5b4-85f88fd09538%2Ffc25a725-4f75-4c78-91cb-327c301873c4.jpg&w=3840&q=75"
+                    class="d-block w-100" style="height: 900px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://cdn.prod.website-files.com/67f532ea42beb81744d45484/687658c63d07ec0b6203efcb_file%20(18).jpeg"
+                    class="d-block w-100" style="height: 900px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/15271/images/2c2e3-b62b-f276-faa8-57cc871762_Kingley-Vale-West-Sussex-England.jpg"
+                    class="d-block w-100" style="height: 900px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/z/u/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=1300&hei=715&scl=2.313846153846154"
+                    class="d-block w-100" style="height: 900px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-------------------------------------- hero section ----------------------------------------------------->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="fw-bold">ตัวอย่างหน้าเว็บด้วย Bootstrap</h1>
+                    <p>หน้าเว็บนี้สร้างจาก Bootstrap Components พื้นฐาน เช่น Navbar, Grid, Card, Table และ Form
+                    </p>
+                    <button type="button" class="btn btn-orange-deep btn-lg fw-bold">เริ่มต้นใช้งาน</button>
+                    <button type=" button" class="btn btn-outline-light btn-lg fw-bold">ติดต่อเรา</button>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="card shadow-lg border-0 rounded-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">สรุปภาพรวมระบบ</h5>
+                            <p class="card-text text-muted">ใช้ Bootstrap Grid ในการจัดวางหน้า ใช้ Utility Classes
+                                ช่วยกำหนด
+                                spacing สี และ alignment</p>
+                        </div>
+                        <div>
+                            <ul class="list-group list-group-flush py-3 ">
+                                <li class="list-group-item list-group-item-action">Responsive Layout</li>
+                                <li class="list-group-item list-group-item-action">พร้อมใช้งานบนมือถือ</li>
+                                <li class="list-group-item list-group-item-action">ปรับแต่งต่อได้ง่าย</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------------------------------------------Card------------------------------------------------------ -->
+    <section class="container py-5">
+
+        <div class="d-flex align-items-center flex-column mb-5 text-center">
+            <h2 class="fw-bold h3">คุณสมบัติเด่น</h2>
+            <p class="text-muted small">ส่วนนี้ใช้ Bootstrap Grid + Card</p>
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=2210&quality=70"
+                        class="card-img-top" style="height: 180px; object-fit: cover;" alt="...">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold fs-8">ออกแบบสวยงาม</h5>
+                        <p class="card-text text-muted small">ใช้คลาสมาตรฐานของ Bootstrap
+                            ทำให้หน้าเว็บดูเป็นระเบียบและทันสมัย</p>
+                        <a href="#" class="btn btn-danger btn-sm fw-bold px-3 rounded-2">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=2210&quality=70"
+                        class="card-img-top" style="height: 180px; object-fit: cover;" alt="...">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold fs-8">รองรับ Responsive</h5>
+                        <p class="card-text text-muted small">สามารถแสดงผลได้ดีทั้งบนคอมพิวเตอร์ แท็บเล็ต
+                            และโทรศัพท์มือถือ</p>
+                        <a href="#" class="btn btn-primary btn-sm fw-bold px-3 rounded-2">ดูตัวอย่าง</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=2210&quality=70"
+                        class="card-img-top" style="height: 180px; object-fit: cover;" alt="...">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold fs-8">พัฒนารวดเร็ว</h5>
+                        <p class="card-text text-muted small">ลดเวลาการเขียน CSS เองเพราะ Bootstrap มี component
+                            สำเร็จรูปให้ใช้งาน</p>
+                        <a href="#" class="btn btn-success btn-sm fw-bold px-3 rounded-2">เริ่มต้น</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Table Section -->
+    <section id="table-section" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title fw-bold">ตัวอย่างตารางข้อมูล</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>ชื่อ</th>
+                            <th>ตำแหน่ง</th>
+                            <th>สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>สมชาย ใจดี</td>
+                            <td>ผู้ดูแลระบบ</td>
+                            <td><span class="badge bg-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>สมหญิง พัฒนา</td>
+                            <td>นักพัฒนาเว็บ</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>อนันต์ ทดสอบ</td>
+                            <td>ผู้ใช้งานทั่วไป</td>
+                            <td><span class="badge bg-danger">Inactive</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+
+    <section id="contact" class="py-5 contact-container">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+
+                    <h2 class="section-title fw-bold text-white">ติดต่อเรา</h2>
+                    <p class="text-white">
+                        แบบฟอร์มนี้ใช้ Form controls ของ Bootstrap
+                    </p>
+
+                    <form class="bg-white p-4 rounded shadow-sm">
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">ชื่อ-นามสกุล</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="กรอกชื่อของคุณ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">อีเมล</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="name@example.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">หัวข้อ</label>
+                            <select class="form-select" aria-label="Default select example" id="subject">
+                                <option selected>เลือกหัวข้อ</option>
+                                <option value="1">สอบถามข้อมูล</option>
+                                <option value="2">ขอใบเสนอราคา</option>
+                                <option value="3">ติดต่อทีมงาน</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="พิมพ์ข้อความ..."></textarea>
+                                <label for="message" class="form-label">ข้อความ</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ส่งข้อมูล</button>
+                    </form>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h3 class="fw-bold">ข้อมูลเพิ่มเติม</h3>
+                        <p>
+                            คุณสามารถนำโค้ดตัวอย่างนี้ไปต่อยอดเป็นหน้าเว็บระบบงานนักศึกษา
+                            หน้าแสดงข้อมูลสินค้า หน้า dashboard หรือหน้า landing page ได้
+                        </p>
+                        <hr>
+                        <p><i class="fa-solid fa-phone"></i> <strong>โทร:</strong> 012-345-6789</p>
+                        <p><i class="fa-solid fa-envelope"></i> <strong>อีเมล:</strong> contact@example.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>ที่อยู่:</strong> นครปฐม ประเทศไทย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-start text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">MyBrand</h5>
+                    <p class="small text-white-50">
+                        เรามุ่งมั่นพัฒนาเว็บไซต์ด้วย Bootstrap 5 เพื่อมอบประสบการณ์ที่ดีที่สุดให้กับผู้ใช้งาน ใช้งานง่าย
+                        รวดเร็ว และรองรับทุกอุปกรณ์
+                    </p>
+                    <a type="button" class="btn btn-orange-deep btn-sm fw-bold" href="index.html">กลับหน้าหลัก</a>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white ">บริการ</h5>
+                    <p><a href="#" class="text-white-50 text-decoration-none small">ออกแบบเว็บไซต์</a></p>
+                    <p><a href="#" class="text-white-50 text-decoration-none small">พัฒนาระบบงาน</a></p>
+                    <p><a href="#" class="text-white-50 text-decoration-none small">Dashboard</a></p>
+                    <p><a href="#" class="text-white-50 text-decoration-none small">UI/UX Prototype</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">ติดต่อเรา</h5>
+                    <p class="small text-white-50"><i class="bi bi-geo-alt-fill me-2"></i> นครปฐม, ประเทศไทย</p>
+                    <p class="small text-white-50"><i class="bi bi-envelope-fill me-2"></i> 674259024@webmail.npru.ac.th
+                    </p>
+                    <p class="small text-white-50"><i class="bi bi-telephone-fill me-2"></i> +66 2 123 4567</p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">ติดตามเรา</h5>
+                    <div class="d-flex gap-3 justify-content-start justify-content-md-start">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-line"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="mb-4 mt-5 border-secondary">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="small text-white-50">© 2026 Copyright: <strong>Sommai</strong> | All Rights Reserved</p>
+                </div>
+                <div class="col-md-5 col-lg-4 text-center text-md-end">
+                    <p class="small text-white-50">Designed with <i class="bi bi-pencil"></i> by Sommai</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
